@@ -1048,8 +1048,8 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,kindlyReply:`Bit
 `,Fo=M.ul`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.85rem 0.55rem;
-  width: min(560px, 100%);
+  gap: 0.7rem 0.45rem;
+  width: min(380px, 100%);
   margin: 0.9rem auto 0;
   padding: 0;
   list-style: none;
@@ -1057,13 +1057,13 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,kindlyReply:`Bit
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 
   &::before {
     content: "";
     display: block;
-    width: 100%;
-    aspect-ratio: 1;
+    width: 56px;
+    height: 56px;
     border-radius: 6px;
     background: ${({$color:e})=>e};
     box-shadow: inset 0 0 0 1px rgba(122, 68, 80, 0.1);
