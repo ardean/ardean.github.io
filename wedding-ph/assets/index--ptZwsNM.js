@@ -557,14 +557,14 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   from { opacity: 0; }
   to { opacity: 1; }
 `,ka=N`
-  from { clip-path: polygon(0% 2.2%, 100% 2.2%, 100% 97.5%, 0% 97.5%); }
-  to { clip-path: polygon(0% 0%, 100% 0%, 100% 97.5%, 0% 97.5%); }
+  from { clip-path: inset(2.2% 0 2.5% 0); }
+  to { clip-path: inset(0 0 2.5% 0); }
 `,Aa=N`
-  from { clip-path: polygon(0% 0%, 100% 0%, 100% 97.5%, 0% 97.5%); }
-  to { clip-path: polygon(-50% -50%, 150% -50%, 150% 160%, -50% 160%); }
+  from { clip-path: inset(0 0 2.5% 0); }
+  to { clip-path: inset(-36% -10% -60% -10%); }
 `,ja=N`
-  from { clip-path: polygon(-50% -50%, 150% -50%, 150% 160%, -50% 160%); }
-  to { clip-path: polygon(-80% -80%, 180% -80%, 180% 200%, -80% 200%); }
+  from { clip-path: inset(-36% -10% -60% -10%); }
+  to { clip-path: inset(-40%); }
 `,Ma=N`
   from {
     filter: drop-shadow(0 0 0 transparent);
@@ -592,6 +592,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-content: safe center;
   padding: 6.75rem clamp(0.85rem, 4vw, 2.8rem) 4.8rem;
   overflow: visible;
   background:
@@ -660,7 +661,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   inset: 0;
   z-index: 2;
   overflow: ${({$lidUp:e,$settled:t})=>t||e?`visible`:`hidden`};
-  clip-path: ${({$open:e,$instant:t,$settled:n})=>n||e&&t?`none`:`polygon(0% 2.2%, 100% 2.2%, 100% 97.5%, 0% 97.5%)`};
+  clip-path: ${({$open:e,$instant:t,$settled:n})=>n||e&&t?`none`:`inset(2.2% 0 2.5% 0)`};
   animation: ${({$open:e,$instant:t,$settled:n})=>n?`none`:La(e,t,j`
             ${ka} 820ms cubic-bezier(0.22, 0.61, 0.36, 1) both,
             ${Aa} 760ms 0.82s cubic-bezier(0.4, 0, 0.65, 0.2) forwards,
