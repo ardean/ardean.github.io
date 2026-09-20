@@ -542,13 +542,11 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
 `,Ta=`cubic-bezier(0.4, 0, 0.2, 1)`,Ea=N`
   from {
     top: -13%;
-    right: 12%;
-    left: 12%;
+    width: 76%;
   }
   to {
     top: 0;
-    right: 0;
-    left: 0;
+    width: 100%;
   }
 `,Da=N`
   from { transform: scale(0.72); }
@@ -603,8 +601,12 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
 `,La=(e,t,n)=>e&&!t?n:`none`,Ra=M.div`
   position: relative;
   z-index: 2;
-  container-type: inline-size;
-  width: min(760px, 100%, calc((100svh - 7.5rem) / 1.12));
+  align-self: center;
+  width: min(760px, calc((100vh - 7.5rem) / 1.12));
+  width: min(760px, calc((100svh - 7.5rem) / 1.12));
+  max-width: 100%;
+  min-width: 0;
+  margin-inline: auto;
   aspect-ratio: ${({$open:e})=>e?`1`:`1.58`};
   overflow: visible;
   transition: ${({$open:e})=>e?`none`:`transform 420ms ease`};
@@ -618,6 +620,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   }
 `,za=M.div`
   position: relative;
+  container-type: inline-size;
   width: 100%;
   height: 100%;
   overflow: visible;
@@ -667,8 +670,9 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   position: absolute;
   z-index: 2;
   top: ${({$open:e})=>e?`0`:`-13%`};
-  right: ${({$open:e})=>e?`0`:`12%`};
-  left: ${({$open:e})=>e?`0`:`12%`};
+  left: 50%;
+  width: ${({$open:e})=>e?`100%`:`76%`};
+  transform: translateX(-50%);
   bottom: auto;
   aspect-ratio: 1;
   display: flex;
