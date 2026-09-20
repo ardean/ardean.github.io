@@ -592,8 +592,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  justify-content: safe center;
-  padding: 6.75rem clamp(0.85rem, 4vw, 2.8rem) 4.8rem;
+  padding: 0 max(1rem, 4vw);
   overflow: visible;
   background:
     radial-gradient(ellipse at 18% 20%, rgba(237, 208, 204, 0.7), transparent 46%),
@@ -601,15 +600,12 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
     radial-gradient(ellipse at 70% 88%, rgba(243, 196, 196, 0.45), transparent 50%),
     radial-gradient(ellipse at 12% 90%, rgba(232, 213, 176, 0.35), transparent 40%),
     ${({theme:e})=>e.colors.ivory};
-
-  @media (max-width: 430px) {
-    padding: 5.6rem 0.7rem 3.1rem;
-  }
 `,La=(e,t,n)=>e&&!t?n:`none`,Ra=M.div`
   position: relative;
   z-index: 2;
-  width: min(800px, 92%, calc((100svh - 12.5rem) / 1.14));
-  aspect-ratio: ${({$open:e,$instant:t})=>e&&t?`1`:`1.58`};
+  container-type: inline-size;
+  width: min(760px, 100%, calc((100svh - 7.5rem) / 1.12));
+  aspect-ratio: ${({$open:e})=>e?`1`:`1.58`};
   overflow: visible;
   transition: ${({$open:e})=>e?`none`:`transform 420ms ease`};
   transform: none;
@@ -670,15 +666,16 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
 `,Ua=M.article`
   position: absolute;
   z-index: 2;
-  top: ${({$open:e,$instant:t})=>e&&t?`0`:`-13%`};
-  right: ${({$open:e,$instant:t})=>e&&t?`0`:`12%`};
-  left: ${({$open:e,$instant:t})=>e&&t?`0`:`12%`};
+  top: ${({$open:e})=>e?`0`:`-13%`};
+  right: ${({$open:e})=>e?`0`:`12%`};
+  left: ${({$open:e})=>e?`0`:`12%`};
   bottom: auto;
   aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 0;
   padding: 15%;
   overflow: visible;
   background: transparent;
@@ -699,7 +696,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   align-items: stretch;
   justify-content: center;
   text-align: center;
-  transform: ${({$open:e,$instant:t})=>e&&t?`scale(1)`:`scale(0.72)`};
+  transform: ${({$open:e})=>e?`scale(1)`:`scale(0.72)`};
   transform-origin: center center;
   animation: ${({$open:e,$instant:t})=>La(e,t,j`${Da} 860ms 1.58s ${Ta} both`)};
 `,Ga=M.div`
@@ -889,9 +886,9 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   text-align: center;
   overflow-wrap: anywhere;
 `,lo=M(co)`
-  margin-bottom: clamp(0.18rem, 1.1vw, 0.4rem);
+  margin-bottom: clamp(0.18rem, 1.25cqw, 0.4rem);
   font-family: ${({theme:e})=>e.fonts.sans};
-  font-size: clamp(0.52rem, 1.4vw, 0.7rem);
+  font-size: clamp(0.52rem, 1.6cqw, 0.7rem);
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -908,41 +905,41 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   margin: 0;
   text-align: center;
   font-family: ${({theme:e})=>e.fonts.script};
-  font-size: clamp(1.55rem, 8vw, 4.5rem);
+  font-size: clamp(1.55rem, 9.2cqw, 4.5rem);
   font-weight: 400;
   line-height: 1.12;
   color: ${({theme:e})=>e.colors.deepRose};
 `,fo=M(co)`
   margin: 0.05rem 0;
   font-family: ${({theme:e})=>e.fonts.script};
-  font-size: clamp(1.05rem, 4.2vw, 2.4rem);
+  font-size: clamp(1.05rem, 4.8cqw, 2.4rem);
   line-height: 1;
   color: ${({theme:e})=>e.colors.gold};
 `,po=M(co)`
-  margin-top: clamp(0.28rem, 1.4vw, 0.55rem);
+  margin-top: clamp(0.28rem, 1.6cqw, 0.55rem);
   font-family: ${({theme:e})=>e.fonts.serif};
-  font-size: clamp(0.92rem, 2.8vw, 1.75rem);
+  font-size: clamp(0.92rem, 3.2cqw, 1.75rem);
   font-style: italic;
   font-weight: 500;
   line-height: 1.2;
   color: ${({theme:e})=>e.colors.deepRose};
 `,B=M(co)`
-  margin-top: clamp(0.12rem, 0.8vw, 0.28rem);
-  font-size: clamp(0.72rem, 2.2vw, 1.2rem);
+  margin-top: clamp(0.12rem, 0.9cqw, 0.28rem);
+  font-size: clamp(0.72rem, 2.5cqw, 1.2rem);
   line-height: 1.25;
   font-style: italic;
   color: ${({theme:e})=>e.colors.muted};
 `,V=M(co)`
-  margin-top: clamp(0.28rem, 1.2vw, 0.5rem);
+  margin-top: clamp(0.28rem, 1.4cqw, 0.5rem);
   margin-bottom: 0.12rem;
-  font-size: clamp(0.78rem, 2.3vw, 1.3rem);
+  font-size: clamp(0.78rem, 2.65cqw, 1.3rem);
   white-space: pre-line;
   line-height: 1.28;
   color: ${({theme:e})=>e.colors.ink};
 `,mo=M(co)`
-  margin-bottom: clamp(0.4rem, 1.8vw, 0.75rem);
+  margin-bottom: clamp(0.4rem, 2.1cqw, 0.75rem);
   font-family: ${({theme:e})=>e.fonts.sans};
-  font-size: clamp(0.52rem, 1.4vw, 0.72rem);
+  font-size: clamp(0.52rem, 1.6cqw, 0.72rem);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   line-height: 1.4;
