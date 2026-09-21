@@ -47,7 +47,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
     display: none;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 900px) {
     position: absolute;
     top: 100%;
     left: 0;
@@ -75,12 +75,13 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
     color: ${({theme:e})=>e.colors.deepRose};
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 900px) {
     padding: 0.7rem 0;
   }
 `,ei=N.div`
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 0.15rem;
 `,ti=N.button`
   appearance: none;
@@ -104,6 +105,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   appearance: none;
   display: grid;
   place-items: center;
+  flex-shrink: 0;
   width: 42px;
   height: 42px;
   margin: 0 -0.2rem 0 0;
@@ -127,6 +129,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   }
 `,ri=N.button`
   display: none;
+  flex-shrink: 0;
   border: 0;
   background: transparent;
   color: ${({theme:e})=>e.colors.deepRose};
@@ -135,7 +138,7 @@ zweitausendsiebenundzwanzig`,location:`Davao City, Philippinen`,envelopeFor:`Fü
   height: 42px;
   padding: 0;
 
-  @media (max-width: 760px) {
+  @media (max-width: 900px) {
     display: grid;
     place-items: center;
   }
